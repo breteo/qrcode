@@ -1,47 +1,30 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+:root {  /* set up css variables */
+  --ff-primary: 'Outfit', san-serif;
+  --ff-body:var(--ff-primary);
+  --ff-heading:var(--ff-primary);
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
+  --fw-regular: 400;
+  --fw-bold: 700;
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
+  --fs-400: .875rem;
+  --fs-700: 1.875rem;
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
+  --fc-light-gray: hsl(212, 45%, 89%);
+  --fc-grayish-blue: hsl(220, 15%, 55%);
+  --fc-dark-blue: hsl(218, 44%, 22%);
 
-html,
-body {
-  background-color: lightblue;
-  height: 100%;
 }
 
 /* Set core body defaults */
 body {
+  font-family: 'Outfit', san-serif;
+  background: hsl(212, 45%, 89%);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  font-size: 15px;
 }
 
 /* A elements that don't have a class get default styles */
@@ -53,7 +36,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -83,10 +65,28 @@ select {
 /* Utility */
 
 .container {
-  /* responsivity */
-  --max-width: 1110px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  background-color: white;
+  border-radius: 17px;
+  margin: 0 auto;
   margin-inline: auto;
 }
+
+.imgBox {
+  padding: 18px;
+  text-align: center;
+  
+}
+
+.imgBox img {
+  border-radius: 1.875rem;
+}
+
+.fw-regular { font-weight: var(--fw-regular);}
+.fw-bold { font-weight: var(--fw-bold);}
+
+.fs-400 { font-size: var(--fs-400);}
+.fs-700 { font-size: var(--fs-700);}
+
+.fc-light-gray { color: var(--fc-light-gray);}
+.fc-dark-blue { color: var(--fc-dark-blue);}
+.fc-grayish-blue { color: var(--fc-grayish-blue);}

@@ -69,17 +69,18 @@ select {
   border-radius: 17px;
   margin: 0 auto;
   margin-inline: auto;
+  filter: drop-shadow(.75em .75em 1em rgb(88, 88, 88));
 }
 
 .imgBox {
   padding: 18px;
   text-align: center;
-  
 }
 
 .imgBox img {
   border-radius: 1.875rem;
 }
+
 
 .fw-regular { font-weight: var(--fw-regular);}
 .fw-bold { font-weight: var(--fw-bold);}
